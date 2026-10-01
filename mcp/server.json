@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "org.jobopportunitiesapi/mcp",
+  "description": "Search 2.3M live employer-direct job postings, company hiring signal, market stats, change feed.",
+  "title": "JOA — Job Opportunities API",
+  "websiteUrl": "https://jobopportunitiesapi.org/mcp",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.jobopportunitiesapi.org/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <JOA API key>. Required for search_jobs, get_job, company_hiring's full roster, and changes_since. Not required for market_signals or coverage (keyless statistics). Get a free Explore key (1,000 records/month, no card) at https://jobopportunitiesapi.org/login?ref=mcp.",
+          "isRequired": false,
+          "isSecret": true,
+          "placeholder": "Bearer YOUR_JOA_API_KEY"
+        }
+      ]
+    }
+  ]
+}
