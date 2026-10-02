@@ -1,9 +1,10 @@
 # JOA MCP Server
 
 Remote [Model Context Protocol](https://modelcontextprotocol.io) server for the
-**Job Opportunities API (JOA)** — search ~2.3M live employer-direct job postings
-across 248 countries, look up a company's hiring signal, read aggregate market
-statistics, and follow the incremental change feed, straight from an AI agent.
+**Job Opportunities API (JOA)** — search live employer-direct job postings
+from employers' own career sites, look up a company's hiring signal, read
+aggregate market statistics, and follow the incremental change feed, straight
+from an AI agent.
 
 - **Live endpoint:** `https://api.jobopportunitiesapi.org/mcp` (Streamable HTTP, single endpoint, both verbs)
 - **Docs:** https://jobopportunitiesapi.org/mcp
@@ -17,9 +18,9 @@ statistics, and follow the incremental change feed, straight from an AI agent.
 |---|---|---|
 | `search_jobs` | Filter the live ledger by country, city, US state, category, seniority, remote type, employment type, salary, employer, source type, free text | Yes |
 | `get_job` | One job posting's full detail, including the complete advert text and closure info | Yes |
-| `company_hiring` | An employer's profile and 30/90/365-day open-roles trend | Trend is keyless; full profile/roster needs a key |
+| `company_hiring` | An employer's profile and open-roles trend over several time windows | Trend is keyless; full profile/roster needs a key |
 | `market_signals` | Aggregate salary percentiles and time-to-fill by job family × country × seniority | **No** |
-| `coverage` | Dataset size, freshness, per-country and top-500-employer coverage audit | **No** |
+| `coverage` | Dataset size, freshness, per-country and top-employer coverage audit | **No** |
 | `changes_since` | Incremental delta feed: created/updated/withdrawn/delisted since a cursor | Yes, Growth plan or above |
 
 A row-serving tool called with no key never touches the database — it returns a
@@ -123,10 +124,10 @@ MCP Registry under the DNS-verified namespace `org.jobopportunitiesapi/mcp`.
 
 ## About JOA
 
-Job Opportunities API — ~2.3M live employer-direct job postings across 248
-countries, ~169k employers with live listings, ~7M closed postings retained with
-closure dates. Every field is tagged published/inferred/absent (provenance);
-coverage gaps are published, not hidden. REST API, keyless statistics, website
+Job Opportunities API — live employer-direct job postings taken from employers'
+own career sites and applicant-tracking systems, with closed postings retained
+with closure dates. Every field is tagged published/inferred/absent (provenance);
+coverage gaps are published, not hidden (live figures: https://jobopportunitiesapi.org/facts). REST API, keyless statistics, website
 job/company pages, CSV export, OpenAPI spec.
 
 - Website: https://jobopportunitiesapi.org
