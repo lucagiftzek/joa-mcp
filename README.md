@@ -7,7 +7,8 @@ aggregate market statistics, and follow the incremental change feed, straight
 from an AI agent.
 
 - **Live endpoint:** `https://api.jobopportunitiesapi.org/mcp` (Streamable HTTP, single endpoint, both verbs)
-- **Docs:** https://jobopportunitiesapi.org/mcp
+- **Use the endpoint above (not the website) in MCP clients and proxies** such as Claude Desktop, Cursor, mcp-remote or mcpo.
+- **Setup guide:** [MCP setup guide](https://jobopportunitiesapi.org/docs/mcp) (a web page for people, not the server endpoint)
 - **Pricing:** https://jobopportunitiesapi.org/pricing
 - **Registry:** [`org.jobopportunitiesapi/mcp`](https://registry.modelcontextprotocol.io) on the official MCP Registry
 - **This repo:** listing/config metadata only — **no API source code**. The server itself ships in JOA's own Go API binary.
