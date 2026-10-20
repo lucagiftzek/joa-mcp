@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "job-opportunities-api",
+  "version": "1.0.0",
+  "description": "Live jobs straight from employers' own career sites. No job boards, no agencies.",
+  "author": {
+    "name": "Job Opportunities API",
+    "url": "https://jobopportunitiesapi.org"
+  },
+  "homepage": "https://jobopportunitiesapi.org/docs/mcp",
+  "repository": "https://github.com/lucagiftzek/joa-mcp",
+  "license": "NOASSERTION",
+  "keywords": [
+    "jobs",
+    "job postings",
+    "careers",
+    "hiring",
+    "ATS",
+    "labour market",
+    "MCP"
+  ]
+}
