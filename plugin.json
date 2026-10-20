@@ -9,7 +9,7 @@
   },
   "homepage": "https://jobopportunitiesapi.org/docs/mcp",
   "repository": "https://github.com/lucagiftzek/joa-mcp",
-  "license": "NOASSERTION",
+  "license": "MIT",
   "keywords": [
     "jobs",
     "job postings",
