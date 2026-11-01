@@ -6,10 +6,13 @@ from employers' own career sites, look up a company's hiring signal, read
 aggregate market statistics, and follow the incremental change feed, straight
 from an AI agent.
 
+The ledger holds over 2 million live job postings worldwide, over 500,000 of them in Europe (EU, EFTA and UK), read from 70 recruiting platforms (61 of them applicant tracking systems). Closed roles are kept with a closure date, and every field says whether the employer published it or JOA inferred it.
+
 - **Live endpoint:** `https://api.jobopportunitiesapi.org/mcp` (Streamable HTTP, single endpoint, both verbs)
 - **Use the endpoint above (not the website) in MCP clients and proxies** such as Claude Desktop, Cursor, mcp-remote or mcpo.
 - **Setup guide:** [MCP setup guide](https://jobopportunitiesapi.org/docs/mcp) (a web page for people, not the server endpoint)
 - **Pricing:** https://jobopportunitiesapi.org/pricing
+- **Free to try:** a free Explore key gives 1,000 records a month, no card. Sign up with a company email address and the first month of a monthly Starter or Growth plan is free.
 - **Registry:** [`org.jobopportunitiesapi/mcp`](https://registry.modelcontextprotocol.io) on the official MCP Registry
 - **This repo:** listing/config metadata only — **no API source code**. The server itself ships in JOA's own Go API binary.
 
