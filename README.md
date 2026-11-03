@@ -6,7 +6,7 @@ from employers' own career sites, look up a company's hiring signal, read
 aggregate market statistics, and follow the incremental change feed, straight
 from an AI agent.
 
-The ledger holds over 2 million live job postings worldwide, over 500,000 of them in Europe (EU, EFTA and UK), read from 70 recruiting platforms (57 of them applicant tracking systems, live count: https://jobopportunitiesapi.org/coverage). Closed roles are kept with a closure date, and every field says whether the employer published it or JOA inferred it.
+The ledger holds over 2 million live job postings worldwide, over 500,000 of them in Europe (EU, EFTA and UK), read from 70 sources: 61 applicant tracking systems, 7 direct employer channels and 2 public employment services (live count: https://jobopportunitiesapi.org/coverage). Closed roles are kept with a closure date, and every field says whether the employer published it or JOA inferred it.
 
 - **Live endpoint:** `https://api.jobopportunitiesapi.org/mcp` (Streamable HTTP, single endpoint, both verbs)
 - **Use the endpoint above (not the website) in MCP clients and proxies** such as Claude Desktop, Cursor, mcp-remote or mcpo.
