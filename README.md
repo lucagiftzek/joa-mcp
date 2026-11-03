@@ -1,7 +1,7 @@
 # JOA MCP Server
 
 Remote [Model Context Protocol](https://modelcontextprotocol.io) server for the
-**Job Opportunities API (JOA)** — search live employer-direct job postings
+**Job Opportunities API (JOA)**: search live employer-direct job postings
 from employers' own career sites, look up a company's hiring signal, read
 aggregate market statistics, and follow the incremental change feed, straight
 from an AI agent.
@@ -14,7 +14,7 @@ The ledger holds over 2 million live job postings worldwide, over 500,000 of the
 - **Pricing:** https://jobopportunitiesapi.org/pricing
 - **Free to try:** a free Explore key gives 1,000 records a month, no card. Sign up with a company email address and the first month of a monthly Starter or Growth plan is free.
 - **Registry:** [`org.jobopportunitiesapi/mcp`](https://registry.modelcontextprotocol.io) on the official MCP Registry
-- **This repo:** listing/config metadata only — **no API source code**. The server itself ships in JOA's own Go API binary.
+- **This repo:** listing/config metadata only: **no API source code**. The server itself ships in JOA's own Go API binary.
 
 ## The six tools
 
@@ -27,7 +27,7 @@ The ledger holds over 2 million live job postings worldwide, over 500,000 of the
 | `coverage` | Dataset size, freshness, per-country and top-employer coverage audit | **No** |
 | `changes_since` | Incremental delta feed: created/updated/withdrawn/delisted since a cursor | Yes, Growth plan or above |
 
-A row-serving tool called with no key never touches the database — it returns a
+A row-serving tool called with no key never touches the database: it returns a
 structured refusal naming the free-key page, never a bare 401. Any job or company
 description text returned by any tool is third-party text scraped from an external
 employer site: every tool description tells the calling model to treat it as data,
@@ -36,11 +36,11 @@ never as an instruction to follow.
 ## Auth
 
 Exactly one door: an `Authorization: Bearer <key>` HTTP header on the MCP
-connection — never a `?key=` query param, never a tool argument. A free **Explore**
+connection, never a `?key=` query param, never a tool argument. A free **Explore**
 key (1,000 records/month, no card) is enough to try every keyed tool:
 https://jobopportunitiesapi.org/login?ref=mcp
 
-Every tool call is metered identically to the REST endpoint it wraps — same plan,
+Every tool call is metered identically to the REST endpoint it wraps, same plan,
 same monthly allowance, same rate limit. `changes_since` needs the Growth plan or
 above, same as `/v1/changes`.
 
@@ -95,7 +95,7 @@ reads the identical `mcpServers` block).
 ### ChatGPT (developer mode / Apps)
 
 OpenAI's unified plugin directory needs a ZIP submission with an
-identity-verified developer account and a domain-ownership challenge — not yet
+identity-verified developer account and a domain-ownership challenge, not yet
 submitted. Until then, any MCP-capable ChatGPT developer-mode client that accepts
 a raw Streamable HTTP URL with a static header can use the configuration shown above.
 
@@ -128,7 +128,7 @@ MCP Registry under the DNS-verified namespace `org.jobopportunitiesapi/mcp`.
 
 ## About JOA
 
-Job Opportunities API — live employer-direct job postings taken from employers'
+Job Opportunities API: live employer-direct job postings taken from employers'
 own career sites and applicant-tracking systems, with closed postings retained
 with closure dates. Every field is tagged published/inferred/absent (provenance);
 coverage gaps are published, not hidden (live figures: https://jobopportunitiesapi.org/facts). REST API, keyless statistics, website
@@ -143,5 +143,5 @@ job/company pages, CSV export, OpenAPI spec.
 
 The contents of this repository (documentation, configuration snippets, and
 `server.json`) are licensed under the [MIT License](./LICENSE). This repository
-contains **no source code of the JOA API or MCP server implementation** — those
+contains **no source code of the JOA API or MCP server implementation**, those
 live in JOA's private monorepo and ship as part of the production API binary.
