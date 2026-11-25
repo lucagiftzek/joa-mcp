@@ -1,5 +1,7 @@
 # JOA MCP Server
 
+[![Job Opportunities API MCP connector](https://glama.ai/mcp/connectors/org.jobopportunitiesapi/mcp/badges/score.svg)](https://glama.ai/mcp/connectors/org.jobopportunitiesapi/mcp)
+
 Remote [Model Context Protocol](https://modelcontextprotocol.io) server for the
 **Job Opportunities API (JOA)**: search live employer-direct job postings
 from employers' own career sites, look up a company's hiring signal, read
